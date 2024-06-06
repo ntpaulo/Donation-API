@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+services:
+  banco-dados:
+    image: postgres:12-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: ajuda-rs-db
+      POSTGRES_USER: postgres
+=======
+services:
+  banco-dados:
+    image: postgres:12-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: ajuda-rs-db
+      POSTGRES_USER: postgres
+>>>>>>> 7d72da5 (ItemController - Concluído)
+      POSTGRES_PASSWORD: postgres
