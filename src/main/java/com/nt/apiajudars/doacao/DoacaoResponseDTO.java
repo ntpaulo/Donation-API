@@ -1,23 +1,13 @@
-<<<<<<< HEAD
 package com.nt.apiajudars.doacao;
 
 import com.nt.apiajudars.doador.Doador;
+import com.nt.apiajudars.item.Item;
 
-public record DoacaoResponseDTO(String id, Doador doador) {
+import java.util.List;
 
-    public DoacaoResponseDTO (Doacao doacao){
-        this(doacao.getId(), doacao.getDoador());
-    }
-}
-=======
-package com.nt.apiajudars.doacao;
-
-import com.nt.apiajudars.doador.Doador;
-
-public record DoacaoResponseDTO(String id, Doador doador) {
+public record DoacaoResponseDTO(Long id, Long doador_id, List<Item> itens) {
 
     public DoacaoResponseDTO (Doacao doacao){
-        this(doacao.getId(), doacao.getDoador());
+        this(doacao.getId(), doacao.getDoador().getId(), doacao.getItens());
     }
 }
->>>>>>> 7d72da5 (ItemController - Concluído)
