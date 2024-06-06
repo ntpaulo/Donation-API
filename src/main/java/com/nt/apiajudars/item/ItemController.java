@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-package com.nt.apiajudars.item;
-
-public class ItemController {
-}
-=======
 package com.nt.apiajudars.item;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,14 +21,14 @@ public class ItemController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Item> listById(@PathVariable(value = "id") String id) {
+    public ResponseEntity<Item> listById(@PathVariable(value = "id") Long id) {
         Item item = repository.findById(id).orElseThrow();
 
         return ResponseEntity.ok().body(item);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Item> update(@RequestBody Item data, @PathVariable(value = "id") String id) {
+    public ResponseEntity<Item> update(@RequestBody Item data, @PathVariable(value = "id") Long id) {
         Item item = repository.findById(id).orElseThrow();
 
         item.setNome(data.getNome());
@@ -47,11 +41,10 @@ public class ItemController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable(value = "id") String id) {
+    public ResponseEntity<?> delete(@PathVariable(value = "id") Long id) {
         repository.deleteById(id);
 
         return ResponseEntity.noContent().build();
     }
 
 }
->>>>>>> 7d72da5 (ItemController - Concluído)

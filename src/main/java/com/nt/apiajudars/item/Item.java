@@ -8,7 +8,6 @@ import lombok.*;
 
 @Table(name = "Item")
 @Entity(name = "Item")
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
@@ -32,6 +31,46 @@ public class Item {
         this.nome = nome;
         this.quantidade = quantidade;
         this.categoria = categoria;
+        this.doacao = doacao;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+    public Integer getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public Doacao getDoacao() {
+        return doacao;
+    }
+
+    public void setDoacao(Doacao doacao) {
         this.doacao = doacao;
     }
 }
