@@ -30,7 +30,7 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 ### 🔧 Instalação
 
-1. Ao instalar o PostgreSQL, guarde a senha que você utilizou na instalação.
+1. Ao instalar o PostgreSQL, guarde a senha que você utilizou na instalação; você também pode usar o Docker. 
 
 2. Baixe o arquivo da API no GitHub como um arquivo zip, e depois extraia-o.
 
