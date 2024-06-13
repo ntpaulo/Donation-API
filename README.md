@@ -74,7 +74,7 @@ Dentro do "Insomnia".
 
 ## 📄 Licença
 
-Este projeto está sob a licença (MIT) - veja o arquivo [MIT-LICENSE.txt](https://github.com/CleitisomAndrade/Donation-API/blob/4a74cb7dbcbb39e1b8def73d1264d11bb6b3d4f1/MIT-LICENSE.txt) para detalhes.
+Este projeto está sob a licença (MIT) - veja o arquivo [/ntpaulo/Donation-API/blob/ece56e0387cc5ff6b2905d4772560300ce19b1d5/LICENSE](https://github.com/ntpaulo/Donation-API/blob/ece56e0387cc5ff6b2905d4772560300ce19b1d5/LICENSE) para detalhes.
 
 ## 🎁 Expressões de gratidão
 
