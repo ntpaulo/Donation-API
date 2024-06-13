@@ -64,8 +64,10 @@ Dentro do "Insomnia".
   
 ### 🔩 Analise os testes de ponta a ponta
 
-![WhatsApp Image 2024-06-13 at 13 28 10](https://github.com/ntpaulo/Donation-API/assets/112903273/a75300de-44cd-4843-af84-ffde3a0fafb4)
+![esquema das classes](https://github.com/ntpaulo/Donation-API/assets/112903273/9425040a-d5e3-49c1-952d-31d99600147c)
 
+
+Para integrar a API em um Front end basta acessar o link (https://cursos.alura.com.br/forum/topico-cors-113963)
 
 
 ## ✒️ Autores
