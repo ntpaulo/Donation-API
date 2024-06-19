@@ -32,7 +32,7 @@ public class DoadorController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Doador> listById(@PathVariable(value = "id") Long id) {
+    public ResponseEntity<Doador> buscarDoadorById(@PathVariable(value = "id") Long id) {
         Doador doadorData = doadorRepository.findById(id).orElseThrow();
 
         return ResponseEntity.ok().body(doadorData);
