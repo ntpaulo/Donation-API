@@ -1,6 +1,7 @@
 package com.nt.apiajudars.doador;
 
 
+import com.nt.apiajudars.item.Item;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +29,13 @@ public class DoadorController {
     public List<DoadorResponseDTO> listarDoadores() {
         List<DoadorResponseDTO> doadores = repository.findAll().stream().map(DoadorResponseDTO::new).collect(Collectors.toList());
         return doadores;
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Doador> listById(@PathVariable(value = "id") Long id) {
+        Doador doadorData = repository.findById(id).orElseThrow();
+        
+        return ResponseEntity.ok().body(doadorData);
     }
 
     @PutMapping("/{id}")
