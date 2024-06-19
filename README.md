@@ -71,13 +71,13 @@ Para integrar a API em um Front end basta acessar o link (https://cursos.alura.c
 
 
 ## ✒️ Equipe
-Adriel Rosa da Silva________________RA:1282317340
+Adriel Rosa da Silva_____________RA:1282317340
 
-Cleitisom de Andrade______________RA:12823214333
+Cleitisom de Andrade_____________RA:12823214333
 
-Ellen Beatryz da Silva Polito________RA:12823123285
+Ellen Beatryz da Silva Polito____RA:12823123285
 
-Gabriel Berg dos Santos Nogueira_RA:12823142095
+Gabriel Berg dos Santos Nogueira__RA:12823142095
 
 Jussikele Cosme de Araújo_________RA:12823125707
 
