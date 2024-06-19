@@ -30,10 +30,10 @@ public class DoadorController {
         List<DoadorResponseDTO> doadores = doadorRepository.findAll().stream().map(DoadorResponseDTO::new).collect(Collectors.toList());
         return doadores;
     }
-    
+
     @GetMapping("/{id}")
     public ResponseEntity<Doador> listById(@PathVariable(value = "id") Long id) {
-        Doador doadorData = repository.findById(id).orElseThrow();
+        Doador doadorData = doadorRepository.findById(id).orElseThrow();
 
         return ResponseEntity.ok().body(doadorData);
     }
