@@ -12,25 +12,25 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("Doador")
+@RequestMapping("doador")
 public class DoadorController {
 
     @Autowired
-    private DoadorRepository repository;
+    private DoadorRepository doadorRepository;
 
     @PostMapping
     public void criarDoador(@RequestBody CreateDoadorDTO data) {
         Doador doadorData = new Doador(data);
-        repository.save(doadorData);
+        doadorRepository.save(doadorData);
     }
 
 
     @GetMapping
     public List<DoadorResponseDTO> listarDoadores() {
-        List<DoadorResponseDTO> doadores = repository.findAll().stream().map(DoadorResponseDTO::new).collect(Collectors.toList());
+        List<DoadorResponseDTO> doadores = doadorRepository.findAll().stream().map(DoadorResponseDTO::new).collect(Collectors.toList());
         return doadores;
     }
-
+    
     @GetMapping("/{id}")
     public ResponseEntity<Doador> listById(@PathVariable(value = "id") Long id) {
         Doador doadorData = repository.findById(id).orElseThrow();
@@ -41,7 +41,7 @@ public class DoadorController {
     @PutMapping("/{id}")
     public DoadorResponseDTO atualizarDoador(@PathVariable Long id, @RequestBody UpdateDoadorDTO data) {
 
-        Optional<Doador> optionalDoador = repository.findById(id);
+        Optional<Doador> optionalDoador = doadorRepository.findById(id);
 
         Doador doador = optionalDoador.orElseThrow(() -> new EntityNotFoundException("Doador não existe"));
 
@@ -51,7 +51,7 @@ public class DoadorController {
         if (data.instagram() != null) {
             doador.setInstagram(data.instagram());
         }
-        Doador doadorAtualizado = repository.save(doador);
+        Doador doadorAtualizado = doadorRepository.save(doador);
         DoadorResponseDTO doadorResponseDTO = new DoadorResponseDTO(doadorAtualizado);
         return doadorResponseDTO;
     }
@@ -59,9 +59,9 @@ public class DoadorController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> excluirDoador(@PathVariable Long id) {
         try {
-            Optional<Doador> optionalDoador = repository.findById(id);
+            Optional<Doador> optionalDoador = doadorRepository.findById(id);
             Doador doador = optionalDoador.orElseThrow(() -> new EntityNotFoundException("Doador não existe"));
-            repository.delete(doador);
+            doadorRepository.delete(doador);
             return ResponseEntity.ok().body("Doador deletado");
         } catch (RuntimeException e) {
             return ResponseEntity.status(404).body(e.getMessage());

@@ -27,7 +27,7 @@ public class DoacaoController {
     private ItemRepository itemRepository;
 
     @GetMapping
-    public List<DoacaoResponseDTO> getAll(){
+    public List<DoacaoResponseDTO> listar(){
         List<DoacaoResponseDTO> doacoes = doacaoRepository.findAll().stream().map(DoacaoResponseDTO::new).collect(Collectors.toList());
         return doacoes;
     }
