@@ -34,7 +34,7 @@ public class DoadorController {
     @GetMapping("/{id}")
     public ResponseEntity<Doador> listById(@PathVariable(value = "id") Long id) {
         Doador doadorData = repository.findById(id).orElseThrow();
-        
+
         return ResponseEntity.ok().body(doadorData);
     }
 
